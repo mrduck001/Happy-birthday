@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد ميلاد أحمد</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- العداد التنازلي -->
+    <div id="countdown" class="countdown">
+        <p>10</p>
+    </div>
+
+    <!-- الكارت الأول -->
+    <div id="card1" class="card">
+        <div class="content">
+            <p id="birthdayText"></p>
+        </div>
+    </div>
+
+    <!-- الكارت الثاني (اللي فيه زر التالي) -->
+    <div id="card2" class="card hidden">
+        <button id="nextButton" class="next-btn">التالي</button>
+    </div>
+
+    <!-- التورته والصفحة الثانية -->
+    <div id="cakePage" class="hidden">
+        <div class="cake">
+            <img src="cake.jpg" alt="Happy Birthday Cake">
+            <p>هابي بيرز داي يا بطل!</p>
+        </div>
+        <div class="wishBox">
+            <textarea id="wishInput" placeholder="اكتب هنا أمنيتك"></textarea>
+            <button id="sendWish" class="send-btn">إرسال أمنيتك</button>
+        </div>
+    </div>
+
+    <!-- الصفحة الثالثة - المفاتيح واللعبة -->
+    <div id="gamePage" class="hidden">
+        <p>عدد المفاتيح التي جمعتها: <span id="keyCount">0</span></p>
+        <div class="game-options">
+            <button id="questionGame" class="game-btn">لعبة سؤال وجواب</button>
+            <button id="incompleteGame1" class="game-btn">اللعبة الثانية</button>
+            <button id="incompleteGame2" class="game-btn">اللعبة الثالثة</button>
+        </div>
+        <div id="treasureBox" class="hidden">
+            <button class="treasure-btn">فتح صندوق الكنز</button>
+        </div>
+    </div>
+
+    <!-- الصفحة الأخيرة -->
+    <div id="endPage" class="hidden">
+        <p>وهنا تنتهي رحلتك يا بطل! ربنا يوفقك في دنيتك يا رب!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
