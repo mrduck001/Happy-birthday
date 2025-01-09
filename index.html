@@ -3,57 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عيد ميلاد أحمد</title>
-    <link rel="stylesheet" href="style.css">
+    <title>موقع عيد ميلاد أحمد</title>
+    <style>
+        body {
+            background-color: #F8D0E6; /* خلفية بينك فاتح */
+            font-family: Arial, sans-serif;
+        }
+        .counter {
+            font-size: 30px;
+            color: #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .card {
+            background-color: #fff;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #message {
+            font-size: 20px;
+            color: #000;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
-    <!-- العداد التنازلي -->
-    <div id="countdown" class="countdown">
-        <p>10</p>
-    </div>
+    <div id="counter" class="counter">10</div>
+    <div class="card" id="message"></div>
+    <button onclick="goToNextPage()">التالي</button>
 
-    <!-- الكارت الأول -->
-    <div id="card1" class="card">
-        <div class="content">
-            <p id="birthdayText"></p>
-        </div>
-    </div>
+    <script>
+        let countdown = 10;
+        const counterElement = document.getElementById('counter');
+        
+        const countdownInterval = setInterval(function() {
+            countdown--;
+            counterElement.textContent = countdown;
+            
+            if (countdown === 0) {
+                clearInterval(countdownInterval);
+            }
+        }, 1000);
 
-    <!-- الكارت الثاني (اللي فيه زر التالي) -->
-    <div id="card2" class="card hidden">
-        <button id="nextButton" class="next-btn">التالي</button>
-    </div>
+        function goToNextPage() {
+            window.location.href = 'page2.html';
+        }
 
-    <!-- التورته والصفحة الثانية -->
-    <div id="cakePage" class="hidden">
-        <div class="cake">
-            <img src="cake.jpg" alt="Happy Birthday Cake">
-            <p>هابي بيرز داي يا بطل!</p>
-        </div>
-        <div class="wishBox">
-            <textarea id="wishInput" placeholder="اكتب هنا أمنيتك"></textarea>
-            <button id="sendWish" class="send-btn">إرسال أمنيتك</button>
-        </div>
-    </div>
+        function typeWriter(element, text, i, speed) {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                setTimeout(function() {
+                    typeWriter(element, text, i + 1, speed);
+                }, speed);
+            }
+        }
 
-    <!-- الصفحة الثالثة - المفاتيح واللعبة -->
-    <div id="gamePage" class="hidden">
-        <p>عدد المفاتيح التي جمعتها: <span id="keyCount">0</span></p>
-        <div class="game-options">
-            <button id="questionGame" class="game-btn">لعبة سؤال وجواب</button>
-            <button id="incompleteGame1" class="game-btn">اللعبة الثانية</button>
-            <button id="incompleteGame2" class="game-btn">اللعبة الثالثة</button>
-        </div>
-        <div id="treasureBox" class="hidden">
-            <button class="treasure-btn">فتح صندوق الكنز</button>
-        </div>
-    </div>
-
-    <!-- الصفحة الأخيرة -->
-    <div id="endPage" class="hidden">
-        <p>وهنا تنتهي رحلتك يا بطل! ربنا يوفقك في دنيتك يا رب!</p>
-    </div>
-
-    <script src="script.js"></script>
+        const element = document.getElementById('message');
+        const text = "7/1/2007";
+        typeWriter(element, text, 0, 200); // سرعة الكتابة 200 ملي ثانية لكل حرف
+    </script>
 </body>
 </html>
