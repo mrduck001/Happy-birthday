@@ -1,0 +1,119 @@
+/* تنسيق العام للموقع */
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    background-color: #ffccff;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#countdown {
+    font-size: 3em;
+    color: #ff3366;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.content p {
+    font-size: 2em;
+    color: black;
+    animation: typing 2s steps(30) 1s forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+#nextButton {
+    background-color: #9933cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#nextButton:hover {
+    background-color: #7a26b8;
+}
+
+.cake img {
+    width: 300px;
+}
+
+.wishBox {
+    margin-top: 20px;
+}
+
+#wishInput {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.send-btn {
+    margin-top: 10px;
+    background-color: #9933cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: #7a26b8;
+}
+
+.game-btn {
+    background-color: #ff3366;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.game-btn:hover {
+    background-color: #e0245e;
+}
+
+#treasureBox {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.treasure-btn {
+    background-color: #33cc33;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.treasure-btn:hover {
+    background-color: #28b828;
+}
